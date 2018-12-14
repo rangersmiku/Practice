@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+#-*- coding:utf-8 -*-
+#14.py
+
+#usage: python 14.py [filename] [number of lines]
+
+import sys 
+
+with open( sys.argv[1]) as f:
+    lines = f.readlines()
+   
+for line in lines[:int(sys.argv[2])]
+    print line,
+    

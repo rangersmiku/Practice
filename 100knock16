@@ -1,0 +1,14 @@
+import sys
+
+def split file filename ,numer_of_parts):
+    with open ( filename) as f:
+        lines= f,readlines()
+        
+    if len(lines)% numbers_of_parts):
+       raise Exception("Undividable by N=%d" % number_of_parts)
+    else:
+       number_of_lines = len(lines)/number_of_parts
+       
+    for i in range (number_of_parts):
+         with open ("split%s.txt" % str(i), "w") as w:
+             w.writelines(lines[number_of_lines*i: number_of_lines*(i+1)])

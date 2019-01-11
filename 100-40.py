@@ -18,3 +18,21 @@ def parse_neko():
             out_file.write(
                 cabocha.parse(line).toString(CaboCha.FORMAT_LATTICE)
             )
+Class Morph:
+    '''
+    形態素クラス
+    表層形（surface）、基本形（base）、品詞（pos）、品詞細分類1（pos1）を
+    メンバー変数に持つ
+    '''
+    
+    def _init_(self,surface,base,pos,pos1):
+        '''初期化'''
+        self.surface=surface
+        self.base=base
+        self.pos=pos
+        self.pos1=pos1
+        
+        
+    def _str_(self):
+        '''オブジェクトの文字列表現'''
+         return'surface[{}]\tbase[{}]\tpos[{}]\tpos1[{}]'/

@@ -35,4 +35,21 @@ Class Morph:
         
     def _str_(self):
         '''オブジェクトの文字列表現'''
-         return'surface[{}]\tbase[{}]\tpos[{}]\tpos1[{}]'/
+         return'surface[{}]\tbase[{}]\tpos[{}]\tpos1[{}]'.format(felf.surface,delf.base,self.pos,self.pos1)
+        
+    def neco_lines():
+        '''「吾輩は猫である」の係り受け解析結果のジェネレータ
+    「吾輩は猫である」の係り受け解析結果を順次読み込んで、
+    1文ずつMorphクラスのリストを返す
+
+    戻り値：
+    1文のMorphクラスのリスト
+    '''
+        with open(fname_parsed) as file_parsed:
+          
+            morphs=[]
+            for line in file_parsed:
+                
+                in line == 'EOS\n':
+                    yield morphs
+                    morphs = []

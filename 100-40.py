@@ -53,3 +53,24 @@ Class Morph:
                 in line == 'EOS\n':
                     yield morphs
                     morphs = []
+            else:
+              #
+              if line[0]=='*':
+                countinue
+              cols = line.split('\t')
+              res_sols=cols[1].split(',')
+              
+              morphs.append(Morph(
+                cols[0],
+                res_cols[6],
+                res_cols[0],
+                res_cols[1]
+              ))
+           raise StopIteration
+parse_neko()
+ for i,morphs in enumerate(neco_lines(),1):
+    
+    if i==3:
+      for morph in morphs:
+        print(morph)
+      break

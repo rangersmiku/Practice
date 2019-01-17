@@ -7,7 +7,7 @@ with open(fname_result, mode='w') as out_file:
     # 1文ずつリスト作成
     for chunks in neco_lines():
 
-        # chunkを列挙
+        # chunk列挙
         for chunk in chunks:
 
             # 動詞を含むかチェック

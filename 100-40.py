@@ -45,6 +45,7 @@ Class Morph:
     戻り値：
     1文のMorphクラスのリスト
     '''
+        
         with open(fname_parsed) as file_parsed:
           
             morphs=[]

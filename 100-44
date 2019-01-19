@@ -28,7 +28,7 @@ def graph_from_edges_ex(edge_list, directed=False):
 with open(fname, mode='w') as out_file:
     out_file.write(input('文字列を入力してください--> '))
 
-# 係り受け解析
+
 parse_neko()
 
 # 1文ずつリスト作成

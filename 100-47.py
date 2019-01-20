@@ -39,11 +39,7 @@ class Morph:
 
 
 class Chunk:
-    '''
-    文節クラス
-    形態素（Morphオブジェクト）のリスト（morphs）、係り先文節インデックス番号（dst）、
-    係り元文節インデックス番号のリスト（srcs）をメンバー変数に持つ
-    '''
+ 
 
     def __init__(self):
         '''初期化'''

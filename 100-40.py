@@ -19,8 +19,7 @@ def parse_neko():
 Class Morph:
     '''
     形態素クラス
-    表層形（surface）、基本形（base）、品詞（pos）、品詞細分類1（pos1）を
-    メンバー変数に持つ
+    表層形（surf
     '''
     
     def _init_(self,surface,base,pos,pos1):

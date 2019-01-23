@@ -14,4 +14,4 @@ for k,v in sorted (prefectures.items, key=lamba x:x[1], reverse=True):
     print(k)
 
                      
-                     ;
+                 

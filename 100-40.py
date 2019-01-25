@@ -18,9 +18,7 @@ def parse_neko():
             )
 Class Morph:
     '''
-    形態素クラス
-    表層形（surf
-    '''
+  '''
     
     def _init_(self,surface,base,pos,pos1):
         '''初期化'''

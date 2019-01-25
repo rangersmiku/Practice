@@ -29,7 +29,7 @@ Class Morph:
         
         
     def _str_(self):
-        '''オブジェクトの文字列表現'''
+        ''''''
          return'surface[{}]\tbase[{}]\tpos[{}]\tpos1[{}]'.format(felf.surface,delf.base,self.pos,self.pos1)
         
     def neco_lines():

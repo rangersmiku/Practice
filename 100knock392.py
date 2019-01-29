@@ -11,8 +11,7 @@ counts = list(zip(*list_word))[1]
 
 
 fp= FontProperties(
-    fname='/usr/share/fonts/truetype/takao-gothic/TakaoGothic.ttf'
-    )
+    fname='/usr/share/fonts/truetype/takao-gothic/TakaoGothic.ttf')
 
 
 plt.scatter(

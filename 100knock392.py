@@ -37,3 +37,5 @@ plt.ylabel('hinndo'fontproperties=fp)
 plt.grid(axis='both')
 
 plt.show()
+
+//aaa

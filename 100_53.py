@@ -6,7 +6,6 @@ import xml.etree.ElementTree as ET
 fname = 'nlp.txt'
 fname_parsed = 'nlp.txt.xml'
 
-
 def parse_nlp():
     '''nlp.txtをStanford Core NLPで解析しxmlファイルへ出力
     すでに結果ファイルが存在する場合は実行しない
@@ -23,7 +22,6 @@ def parse_nlp():
             shell=True,     # shellで実行
             check=True      # エラーチェックあり
         )
-
 
 # nlp.txtを解析
 parse_nlp()

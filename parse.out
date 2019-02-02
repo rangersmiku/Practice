@@ -1,0 +1,2 @@
+エラー: メイン・クラスedu.stanford.nlp.pipeline.StanfordCoreNLPを検出およびロードできませんでした
+原因: java.lang.ClassNotFoundException: edu.stanford.nlp.pipeline.StanfordCoreNLP

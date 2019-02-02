@@ -26,8 +26,10 @@ def parse_nlp():
 # nlp.txtを解析
 parse_nlp()
 
+
 # 解析結果のxmlをパース
 root = ET.parse(fname_parsed)
+
 
 # wordのみ取り出し
 for word in root.iter('word'):

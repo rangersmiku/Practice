@@ -17,7 +17,6 @@ def parse_neko():
                 cabocha.parse(line).toString(CaboCha.FORMAT_LATTICE)
             )
 
-            
 class Morph:
     '''
     '''

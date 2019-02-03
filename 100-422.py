@@ -20,7 +20,6 @@ def parse_neko():
             
 class Morph:
     '''
-   
     '''
     def __init__(self, surface, base, pos, pos1):
         '''初期化'''

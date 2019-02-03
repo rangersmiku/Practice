@@ -5,7 +5,6 @@ import re
 fname = 'neko.txt'
 fname_parsed = 'neko.txt.cabocha'
 
-
 def parse_neko():
     ''' '''
     with open(fname) as data_file, \

@@ -2,7 +2,6 @@ parse_neko()
 
 # 1文ずつリスト作成
 for chunks in neco_lines():
-
     # 係り先があるものを列挙
     for chunk in chunks:
         if chunk.dst != -1:

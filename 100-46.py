@@ -38,7 +38,7 @@ class Morph:
         '''オブジェクトの文字列表現'''
         return 'surface[{}]\tbase[{}]\tpos[{}]\tpos1[{}]'\
             .format(self.surface, self.base, self.pos, self.pos1)
-
+#abs                   
 
 
 

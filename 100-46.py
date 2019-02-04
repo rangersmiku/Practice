@@ -40,6 +40,8 @@ class Morph:
             .format(self.surface, self.base, self.pos, self.pos1)
 
 
+
+
 class Chunk:
     '''
     文節クラス

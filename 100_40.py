@@ -59,7 +59,7 @@ def neco_lines():
             else:
                 # 先頭が*の行は係り受け解析結果なのでスキップ
                 if line[0] == '*':
-                    print (line,line[0],line[1])
+                    print (line,line[0],line[2])
                     continue
 
                 # 表層形はtab区切り、それ以外は','区切りでバラす

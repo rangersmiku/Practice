@@ -7,7 +7,6 @@ from matplotlib.font_manager import FontProperties
 fname = 'neko.txt'
 fname_parsed = 'neko.txt.mecab'
 
-
 def parse_neko():
     '''「吾輩は猫である」を形態素解析
     「吾輩は猫である」(neko.txt)を形態素解析してneko.txt.mecabに保存する

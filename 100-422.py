@@ -5,7 +5,6 @@ import re
 fname = 'neko.txt'
 fname_parsed = 'neko.txt.cabocha'
 
-
 def parse_neko():
     ''' '''
     with open(fname) as data_file, \
@@ -17,12 +16,8 @@ def parse_neko():
                 cabocha.parse(line).toString(CaboCha.FORMAT_LATTICE)
             )
 
-            
-            
-
 class Morph:
     '''
-   
     '''
     def __init__(self, surface, base, pos, pos1):
         '''初期化'''

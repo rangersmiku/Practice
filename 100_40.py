@@ -74,7 +74,7 @@ def neco_lines():
                     res_cols[1]     # pos1
                 ))
 
-        raise StopIteration
+        #raise StopIteration
 
 
 # 係り受け解析

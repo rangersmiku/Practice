@@ -3,14 +3,14 @@ import re
 
 fname='nlp.txt'
 
-def nle_lines():
+def nlp_lines():
     ''' nlp.txtを1文ずつ読み込むジェネレータ
     nlp.txtを順次読み込んで1文ずつ返す
 
     戻り値：
     1文の文字列
     '''
-    with open(fname) as line:
+    with open(fname) as lines:
 
         pattern = re.compile(r'''
         (

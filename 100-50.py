@@ -9,7 +9,7 @@ def nlp_lines():
     nlp.txtを順次読み込んで1文ずつ返す
     '''
 
-    with open(fname) as lilnes:
+    with open(fname) as lines:
         pattern = re.compile(r'''
         (^
         .*?
@@ -34,5 +34,5 @@ def nlp_lines():
                 else:
                     yield line
                     line=''
-for line in nle_lines():
+for line in nlp_lines():
     print (line)

@@ -20,15 +20,6 @@ pattern = re.compile(r'''
 try:
     db = leveldb.DB(bytes("/Users/silky/Documents/GitHub/Practice/level_test", "ascii"),create_if_missing=True)
 
-# gzファイル読み込み、パース
-with gzip.open(fname, 'rt') as data_file:
-    for line in data_file:
-        data_json = json.loads(line)
-
-        # key=name+id、value=areaとしてDBへ追加
-        key = data_json['name'] + '\t' + str(data_json['id'])
-        value = data_json.get('area', '')       # areaはないことがある
-        db.put(key.encode(), value.encode())
     # gzファイル読み込み、パース
     with gzip.open(fname, 'rt') as data_file:
         for line in data_file:
@@ -53,12 +44,13 @@ clue = input('アーティスト名を入力してください--> ')
 hit = False
 
 # アーティスト名+'\t'で検索
-for key, value in db.RangeIter(key_from=(clue + '\t').encode()):
+for key, value in db.key():
 
     # keyをnameとidに戻す
     match = pattern.match(key.decode())
-    name = match.group(1)
-    id = match.group(2)
+    if match.group(1)==clue:
+        name = match.group(1)
+        id = match.group(2)
 
     # 異なるアーティストになったら終了
     if name != clue:

@@ -18,8 +18,17 @@ pattern = re.compile(r'''
 
 # LevelDBオープン、ない時だけ作成
 try:
-    db = leveldb.LevelDB(fname_db, error_if_exists=True)
+    db = leveldb.DB(bytes("/Users/silky/Documents/GitHub/Practice/level_test", "ascii"),create_if_missing=True)
 
+# gzファイル読み込み、パース
+with gzip.open(fname, 'rt') as data_file:
+    for line in data_file:
+        data_json = json.loads(line)
+
+        # key=name+id、value=areaとしてDBへ追加
+        key = data_json['name'] + '\t' + str(data_json['id'])
+        value = data_json.get('area', '')       # areaはないことがある
+        db.put(key.encode(), value.encode())
     # gzファイル読み込み、パース
     with gzip.open(fname, 'rt') as data_file:
         for line in data_file:

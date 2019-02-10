@@ -7,7 +7,7 @@ fname = 'artist.json.gz'
 fname_db = 'test_db'
 
 # LevelDBオープン、なければ作成
-db = leveldb.DB(fname_db, create_if_missing=True)
+db = leveldb.DB(bytes("/Users/silky/Documents/GitHub/Practice/level_test", "ascii"),create_if_missing=True)
 
 # gzファイル読み込み、パース
 with gzip.open(fname, 'rt') as data_file:
@@ -17,7 +17,7 @@ with gzip.open(fname, 'rt') as data_file:
         # key=name+id、value=areaとしてDBへ追加
         key = data_json['name'] + '\t' + str(data_json['id'])
         value = data_json.get('area', '')       # areaはないことがある
-        db.Put(key.encode(), value.encode())
+        db.put(key.encode(), value.encode())
 
 # 確認のため登録件数を表示
-print('{}件登録しました。'.format(len(list(db.RangeIter(include_value=False)))))
+print('{}件登録しました。'.format(len(list(db.keys()))))
